@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .text-ouline {
+    -webkit-text-stroke: 2px black;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .btn-primary {
+    @apply bg-darkGreen text-white hover:scale-110 font-semibold py-2 px-4 rounded-full duration-200;
+  }
+}
+
+@layer utilities {
+  .img-shadow {
+    filter: drop-shadow(-6px 6px 10px rgba(0, 0, 0, 0.4));
+  }
+  .footer-link {
+    @apply hover:underline hover:text-darkGreen duration-200 font-semibold cursor-pointer
+  }
 }
